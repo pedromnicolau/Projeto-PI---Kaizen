@@ -1,0 +1,9 @@
+body {
+  background-color: red;
+  min-height: calc(100vh + 300px);
+}
+
+footer {
+  position: absolute;
+  bottom: -400px;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Treino</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-5">
+    <h2>Cadastrar Treino</h2>
+    <form action="processar_treino.php" method="post" id="form_treino">
+
+        <!-- Campo de nome do treino -->
+        <div class="form-group">
+            <label for="nome">Nome do Treino:</label>
+            <input type="text" class="form-control" id="nome" name="nome" required>
+        </div>
+
+        <!-- Campo de descrição do treino -->
+        <div class="form-group">
+            <label for="descricao">Descrição do Treino:</label>
+            <textarea class="form-control" id="descricao" name="descricao" rows="3" required></textarea>
+        </div>
+
+        <!-- Contêiner para os elementos do treino -->
+        <div id="elementos_treino">
+            <!-- Primeiro elemento -->
+            <div class="elemento_treino">
+                <hr>
+                <div class="form-group">
+                    <label for="exercicio_simples">Exercício:</label>
+                    <select class="form-control" name="exercicio_tipo[]">
+                        <option value="simples">Exercício Simples</option>
+                        <option value="tabata">Tabata</option>
+                        <!-- Adicione mais tipos conforme necessário -->
+                    </select>
+                    <div class="exercicio_simples">
+                        <label>Nome do Exercício:</label>
+                        <input type="text" class="form-control" name="exercicio_nome[]" required>
+                        <label>Repetições:</label>
+                        <input type="number" class="form-control" name="exercicio_repeticoes[]" required>
+                    </div>
+                    <div class="exercicio_tabata" style="display: none;">
+                        <label>Configuração Tabata:</label>
+                        <select class="form-control" name="exercicio_tabata[]">
+                            <option value="1">Tabata 1 (20s/10s x 8 rounds)</option>
+                            <option value="2">Tabata 2 (30s/15s x 6 rounds)</option>
+                            <!-- Adicione mais configurações conforme necessário -->
+                        </select>
+                    </div>
+                    <button type="button" class="btn btn-danger remover_elemento">Remover</button>
+                </div>
+            </div>
+            <!-- Fim do primeiro elemento -->
+        </div>
+
+        <!-- Botão para adicionar mais elementos -->
+        <button type="button" class="btn btn-primary mt-3" id="add_elemento">Adicionar Elemento</button>
+
+        <!-- Botão para cadastrar treino -->
+        <button type="submit" class="btn btn-success mt-3">Cadastrar Treino</button>
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        // Adicionar novo elemento ao treino
+        $("#add_elemento").click(function() {
+            let novo_elemento = $(".elemento_treino").first().clone();
+            novo_elemento.find("input, select").val("");
+            novo_elemento.appendTo("#elementos_treino");
+        });
+
+        // Remover elemento do treino
+        $(document).on("click", ".remover_elemento", function() {
+            $(this).closest(".elemento_treino").remove();
+        });
+
+        // Mostrar ou esconder campos dependendo do tipo de exercício selecionado
+        $(document).on("change", "select[name='exercicio_tipo[]']", function() {
+            let tipo = $(this).val();
+            let container = $(this).closest(".elemento_treino");
+            if (tipo === "simples") {
+                container.find(".exercicio_simples").show();
+                container.find(".exercicio_tabata").hide();
+            } else if (tipo === "tabata") {
+                container.find(".exercicio_simples").hide();
+                container.find(".exercicio_tabata").show();
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
