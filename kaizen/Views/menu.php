@@ -6,7 +6,7 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
-      <li class="nav-item">
+      <li id="nav-item">
         <a class="nav-link" href="index.php">Início</a>
       </li>
       <li class="nav-item">
@@ -24,9 +24,12 @@
       <li class="nav-item">
         <a class="nav-link" href="cronometro.php">Cronômetro</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="usuario.php">Usuário</a>
-      </li>
     </ul>
   </div>
+  <select name="user" id="user-options">
+    <option value="Perfil">Perfil</option>
+    <option value="goals">Metas</option>
+    <option value="evolution">Evolução</option>
+    <option value="logout">Sair</option>
+  </select>
 </nav>

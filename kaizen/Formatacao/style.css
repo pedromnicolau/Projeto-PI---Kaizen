@@ -1,9 +1,25 @@
 body {
-  background-color: red;
-  min-height: calc(100vh + 300px);
+    background-color: red;
+    min-height: calc(100vh + 300px);
 }
 
 footer {
-  position: absolute;
-  bottom: -400px;
+    position: absolute;
+    bottom: -400px;
+}
+
+.navbar-nav {
+    float: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    overflow: hidden;
+}
+
+#user-options {
+    border: none;
+    background-color: transparent;
+    text-align: center;
+    color: white;
 }
