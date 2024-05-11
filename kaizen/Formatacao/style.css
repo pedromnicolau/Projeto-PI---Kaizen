@@ -23,3 +23,20 @@ footer {
     text-align: center;
     color: white;
 }
+
+.btn-primary {
+    background-color: #343a40;
+    border: none;
+}
+
+.btn-primary:active {
+    background-color: black;
+}
+
+.btn-primary:hover {
+    background-color: black;
+}
+
+.btn-primary:focus {
+    background-color: black;
+}
