@@ -1,11 +1,11 @@
 body {
     min-height: calc(100vh + 300px);
 }
-
+/* 
 footer {
     position: absolute;
     bottom: -400px;
-}
+} */
 
 div .img1 {
     background-image: url('../Medias/img1.jpg');
@@ -99,4 +99,27 @@ div .carousel-item {
 .dropdown-child a:hover {
     color: #c2c4c4;
     text-decoration: none;
+  background-color: white;
+}
+
+footer {
+  color: white;
+  background-color: rgb(32, 32, 32);
+  width: 100%;
+  position: absolute;
+  bottom: -400px;
+  text-align: center;
+}
+
+footer .copyright-footer {
+  background-color: rgb(14, 14, 14);
+  padding: 20px;
+}
+
+footer .menus {
+  margin-right: auto;
+}
+
+footer a {
+  color: white;
 }

@@ -1,30 +1,30 @@
-<footer class="bg-dark text-light">
-  <div class="container-fluid py-3">
-  <div class="row">
-    <div class="col-4">
-      <ul class="nav flex-column">
-        <li class="nav-link"><a href="#">Menu inicial</a></li>
-        <li class="nav-link"><a href="#">Treinos</a></li>
-        <li class="nav-link"><a href="#">Exercícios</a></li>
-        <li class="nav-link"><a href="#">Refeições</a></li>
-        <li class="nav-link"><a href="#">Alimentos</a></li>
-        <li class="nav-link"><a href="#">Tabata</a></li>
+<footer>
+  <div>
+  <div>
+    <div class="classe1">
+      <ul>
+        <li class="nav-link">Home</li>
+        <li class="nav-link">Treinos</li>
+        <li class="nav-link">Exercícios</li>
+        <li class="nav-link">Refeições</li>
+        <li class="nav-link">Alimentos</li>
+        <li class="nav-link">Tabata</li>
       </ul>
     </div>
-    <div class="col-8">
-      <p>
-        Com o comprometimento de facilitar o acesso as pessoas a programas que visam sua saúde e bem-estar e incentivar a pratica e o estilo de vida mais saudável. Kaizen reúne diversos recursos e guias para te auxiliar em sua jornada de autotransformação
-      </p>
-      <ul class="nav">
-        <li class="nav-link" ><i class="fab fa-facebook fa-3x "></i></li>
-        <li class="nav-link"><i class="fab fa-instagram fa-3x"></i></li>
-        <li class="nav-link"><i class="fab fa-twitter fa-3x"></i></li>
-        <li class="nav-link"><i class="fab fa-whatsapp fa-3x"></i></li>
+    <div class="classe1">
+      <p>Entre em contato conosco:</p>
+      <ul>
+        <li class="nav-link">Home</li>
+        <li class="nav-link">Treinos</li>
+        <li class="nav-link">Exercícios</li>
+        <li class="nav-link">Refeições</li>
+        <li class="nav-link">Alimentos</li>
+        <li class="nav-link">Tabata</li>
       </ul>
     </div>
   </div>
   </div>
-  <div class="text-center" style="background-color: #333; padding: 20px;" >
-    &copy 2024 Copyright: <a href="#">Kaizen</a>
+  <div>
+    &copy 2024 Todos os direitos reservados: <a href="#">Kaizen</a>
   </div>
 </footer>
