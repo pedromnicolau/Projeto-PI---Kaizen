@@ -1,25 +1,46 @@
-body {
-  background-color: white;
-}
-
 footer {
   color: white;
   background-color: rgb(32, 32, 32);
   width: 100%;
-  position: absolute;
-  bottom: -400px;
   text-align: center;
+  padding: 24px 84px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
 }
 
-footer .copyright-footer {
-  background-color: rgb(14, 14, 14);
-  padding: 20px;
+footer div {
+  display: flex;
+  justify-content: space-between;
 }
 
-footer .menus {
-  margin-right: auto;
+footer .classe1 {
+  order: 1;
+  justify-content: left;
+  display: flex;
+  padding-left: 0px;
 }
 
-footer a {
+footer .classe2 {
+  order: 2;
+  display: block;
+  text-align: left;
+}
+
+footer .classe3 {
+  order: 3;
+}
+
+.classe4 {
+  background-color: rgb(9, 9, 9);
   color: white;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+.right {
+  text-align: right;
 }
