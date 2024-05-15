@@ -1,3 +1,8 @@
+body {
+  background-image: url('Medias/home_agachamento.jpg');
+  background-size: cover;
+}
+
 footer {
   color: white;
   background-color: rgb(32, 32, 32);
@@ -5,13 +10,23 @@ footer {
   text-align: center;
   padding: 24px 84px;
   position: fixed;
-  bottom: 0;
+  bottom: 28px;
   left: 0;
 }
 
 footer div {
   display: flex;
   justify-content: space-between;
+}
+
+footer ul {
+  margin-left: 0px;
+  padding-left: 0px;
+  text-align: left;
+}
+
+footer li {
+  padding-left: 0px !important;
 }
 
 footer .classe1 {
@@ -39,8 +54,13 @@ footer .classe3 {
   width: 100%;
   position: fixed;
   bottom: 0;
+  margin-bottom: 0px;
 }
 
 .right {
   text-align: right;
+}
+
+.bottom {
+  bottom: -200px;
 }

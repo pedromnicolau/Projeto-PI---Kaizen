@@ -11,7 +11,7 @@
       </ul>
     </div>
     <div class="classe2">
-      <p>Entre em contato conosco:</p>
+      <strong><p>Entre em contato conosco:</p></strong>
       <ul>
         <li class="nav-link">Instagram</li>
         <li class="nav-link">Email</li>
@@ -26,6 +26,6 @@
     </div>
   </div>
 </footer>
-<div class="classe4">
-  &copy; 2024 Todos os direitos reservados: <a href="#">Kaizen</a>
+<div>
+  <p class="classe4">&copy; 2024 Todos os direitos reservados: <a href="#">Kaizen</a><img src="Medias/Logo.png" alt="Kaizen" width="75" height="42" style="float:right !important"></p>
 </div>
