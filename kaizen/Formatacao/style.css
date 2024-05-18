@@ -17,26 +17,45 @@ footer {
     overflow: hidden;
 }
 
-#user-options {
+.mainmenubtn {
+    background-color: #343a40;
+    color: RGBa(255, 255, 255, .5);
     border: none;
-    background-color: transparent;
-    text-align: center;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.mainmenubtn svg,
+.dropdown-child svg {
     color: white;
 }
 
-.btn-primary {
+.dropdown-child {
+    display: none;
+    position: absolute;
     background-color: #343a40;
-    border: none;
+    border-radius: 5%;
+    min-width: 100%;
+    max-width: 100%;
+    box-shadow: 0px 8px 16px 0px #343a40;
+    color: white;
+    gap: .5rem;
+    padding: 10% 0 10% 0;
 }
 
-.btn-primary:active {
-    background-color: black;
+.dropdown:hover .dropdown-child {
+    display: block;
+    background-color: #343a40;
+    border-radius: 5%;
 }
 
-.btn-primary:hover {
-    background-color: black;
+.dropdown-child a {
+    color: RGBa(255, 255, 255, .5);
+    text-decoration: none;
+    padding: 10%;
 }
 
-.btn-primary:focus {
-    background-color: black;
+.dropdown-child a:hover {
+    color: #c2c4c4;
+    text-decoration: none;
 }
