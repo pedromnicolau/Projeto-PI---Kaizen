@@ -26,6 +26,7 @@
     </div>
   </div>
 </footer>
-<div>
-  <p class="classe4">&copy; 2024 Todos os direitos reservados: <a href="#">Kaizen</a><img src="Medias/Logo.png" alt="Kaizen" width="75" height="42" style="float:right !important"></p>
+<div class="classe4">
+  <p class="text-center">&copy; 2024 Todos os direitos reservados: <a href="#">Kaizen</a></p>
+  <img src="Medias/Logo.png" alt="Kaizen" width="75" height="42" style="float:right !important">
 </div>
