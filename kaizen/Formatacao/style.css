@@ -1,11 +1,7 @@
 body {
+    background-color: white;
     min-height: calc(100vh + 300px);
 }
-/* 
-footer {
-    position: absolute;
-    bottom: -400px;
-} */
 
 div .img1 {
     background-image: url('../Medias/img1.jpg');
@@ -99,7 +95,6 @@ div .carousel-item {
 .dropdown-child a:hover {
     color: #c2c4c4;
     text-decoration: none;
-  background-color: white;
 }
 
 footer {
@@ -108,8 +103,8 @@ footer {
   width: 100%;
   text-align: center;
   padding: 24px 84px;
-  position: fixed;
-  bottom: 0;
+  position: absolute;
+  bottom: -330px;
   left: 0;
 }
 
@@ -118,33 +113,56 @@ footer div {
   justify-content: space-between;
 }
 
-footer .classe1 {
+footer ul {
+  margin-left: 0px;
+  padding-left: 0px;
+  text-align: left;
+}
+
+footer li {
+  padding-left: 0px !important;
+}
+
+footer .menu {
   order: 1;
   justify-content: left;
   display: flex;
   padding-left: 0px;
 }
 
-footer .classe2 {
+footer .contact {
   order: 2;
   display: block;
   text-align: left;
 }
 
-footer .classe3 {
+footer .motivation-phrase {
   order: 3;
 }
 
-.classe4 {
+.copyright {
   background-color: rgb(9, 9, 9);
   color: white;
-  text-align: center;
-  padding: 10px;
   width: 100%;
-  position: fixed;
-  bottom: 0;
+  height: 60px;
+  position: absolute;
+  bottom: -380px;
+  display: flex;
+  align-items: center;
+}
+
+.copyright p {
+  margin: 0;
+}
+
+.copyright img {
+  margin-right: 82px;
 }
 
 .right {
   text-align: right;
+}
+
+.bottom {
+  bottom: -200px;
 }
