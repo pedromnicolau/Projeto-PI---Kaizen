@@ -53,10 +53,11 @@ The Integrative Project (PI) is an initiative by Fatec Araras aimed at providing
 
 ## Technologies Used
 
-- PHP 7.4+
-- MySQL
-- HTML/CSS
-- Bootstrap
+- ![PHP](https://img.shields.io/badge/PHP-7.4+-blue)
+- ![MySQL](https://img.shields.io/badge/MySQL-5.7+-orange)
+- ![HTML](https://img.shields.io/badge/HTML-5-red)
+- ![CSS](https://img.shields.io/badge/CSS-3-blue)
+- ![Bootstrap](https://img.shields.io/badge/Bootstrap-4-purple)
 
 ## Requirements
 
