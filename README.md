@@ -42,6 +42,7 @@ A Kaizen é uma empresa conceitual dedicada a facilitar o acesso de pessoas a pr
 The Integrative Project (PI) is an initiative by Fatec Araras aimed at providing students with practical experience in software development, applying theoretical concepts learned during the course. This project uses PHP with the MVC (Model-View-Controller) architecture.
 
 ## Introduction
+
 Kaizen is a conceptual company dedicated to facilitating access to programs that promote health and well-being, encouraging the practice of a healthier lifestyle. Our application brings together various resources and guides to assist users in their journey of self-transformation and continuous improvement.
 
 ## Features
@@ -67,6 +68,6 @@ Kaizen is a conceptual company dedicated to facilitating access to programs that
 
 ## Requirements
 
-- Web server (Apache, Nginx, etc.)
-- PHP 7.4 or higher
-- MySQL
+- ![Web Server](https://img.shields.io/badge/Web_Server-Apache%2FNgix-green)
+- ![PHP](https://img.shields.io/badge/PHP-7.4+-blue)
+- ![MySQL](https://img.shields.io/badge/MySQL-5.7+-orange)
