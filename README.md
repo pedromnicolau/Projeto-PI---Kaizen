@@ -4,6 +4,9 @@
 
 O Projeto Integrador (PI) é uma iniciativa da Fatec Araras que visa proporcionar aos alunos uma experiência prática no desenvolvimento de software, aplicando conceitos teóricos aprendidos durante o curso. Este projeto utiliza a linguagem PHP com a arquitetura MVC (Model-View-Controller).
 
+## Apresentação
+A Kaizen é uma empresa conceitual dedicada a facilitar o acesso de pessoas a programas que promovem saúde e bem-estar, incentivando a prática de um estilo de vida mais saudável. Nosso aplicativo reúne diversos recursos e guias para auxiliar os usuários em sua jornada de autotransformação e melhoria contínua.
+
 ## Funcionalidades
 
 - Autenticação de Usuário: Permite que os usuários façam login no sistema utilizando um nome de usuário e senha.
@@ -37,6 +40,9 @@ O Projeto Integrador (PI) é uma iniciativa da Fatec Araras que visa proporciona
 ## Project Description
 
 The Integrative Project (PI) is an initiative by Fatec Araras aimed at providing students with practical experience in software development, applying theoretical concepts learned during the course. This project uses PHP with the MVC (Model-View-Controller) architecture.
+
+## Introduction
+Kaizen is a conceptual company dedicated to facilitating access to programs that promote health and well-being, encouraging the practice of a healthier lifestyle. Our application brings together various resources and guides to assist users in their journey of self-transformation and continuous improvement.
 
 ## Features
 
