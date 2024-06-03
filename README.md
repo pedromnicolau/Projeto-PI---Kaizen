@@ -9,7 +9,7 @@ A Kaizen é uma empresa conceitual dedicada a facilitar o acesso de pessoas a pr
 
 ## Funcionalidades
 
-- Autenticação de Usuário: Permite que os usuários façam login no sistema utilizando um nome de usuário e senha.
+- *Autenticação de Usuário*: Permite que os usuários façam login no sistema utilizando um nome de usuário e senha.
 -	Gestão de Usuários: Permite que os usuários modifiquem suas próprias informações no perfil.
 -	Gerenciamento de Conteúdo: Permite que os usuários criem e personalizem treinos, exercícios, refeições, alimentos e cronômetros.
 -	Cronômetro: Oferece a opção de utilizar cronômetros como uma forma alternativa às repetições no treino.
@@ -31,9 +31,9 @@ A Kaizen é uma empresa conceitual dedicada a facilitar o acesso de pessoas a pr
 
 ## Requisitos
 
-- Servidor web (Apache, Nginx, etc.)
-- PHP 7.4 ou superior
-- MySQL
+- ![Web Server](https://img.shields.io/badge/Web_Server-Apache%2FNgix-green)
+- ![PHP](https://img.shields.io/badge/PHP-7.4+-blue)
+- ![MySQL](https://img.shields.io/badge/MySQL-5.7+-orange)
 
 # Integrative Project (PI) - Fatec Araras
 
