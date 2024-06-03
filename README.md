@@ -9,16 +9,16 @@ A Kaizen é uma empresa conceitual dedicada a facilitar o acesso de pessoas a pr
 
 ## Funcionalidades
 
-- *Autenticação de Usuário*: Permite que os usuários façam login no sistema utilizando um nome de usuário e senha.
--	Gestão de Usuários: Permite que os usuários modifiquem suas próprias informações no perfil.
--	Gerenciamento de Conteúdo: Permite que os usuários criem e personalizem treinos, exercícios, refeições, alimentos e cronômetros.
--	Cronômetro: Oferece a opção de utilizar cronômetros como uma forma alternativa às repetições no treino.
--	Criação de exercícios: O usuário poderá criar exercícios em nosso sistema, definirá o tipo de exercícios, nome, e uma pequena descrição do próprio, os exercícios salvos serão salvos em nosso banco de dados.
--	Criar treinos: em nosso sistema, os usuários poderão formar treinos, buscando os exercícios que os próprios criaram e salvaram, ao finalizar a montagem dos treinos, terá a possibilidade de salvar os treinos também.
--	Personalização: Todos os treinos e exercícios salvos pelos usuários, poderão ser excluídos e alterados a medida da necessidade que possui.
--	Listagem de alimentos: oferecemos determinados alimentos e suas calorias como padrão em nosso sistema e site, sendo enviados de nosso banco de dados para o site, facilitando para os usuários.
--	Busca de alimentos: permite que os usuários busquem alimentos específicos, caso estejam na lista de alimentos.
--	Criação de refeições: por meio dos alimentos da lista, o usuário poderá montar refeições.
+- *Autenticação de Usuário:* Permite que os usuários façam login no sistema utilizando um nome de usuário e senha.
+-	*Gestão de Usuários:* Permite que os usuários modifiquem suas próprias informações no perfil.
+-	*Gerenciamento de Conteúdo:* Permite que os usuários criem e personalizem treinos, exercícios, refeições, alimentos e cronômetros.
+-	*Cronômetro:* Oferece a opção de utilizar cronômetros como uma forma alternativa às repetições no treino.
+-	*Criação de exercícios:* O usuário poderá criar exercícios em nosso sistema, definirá o tipo de exercícios, nome, e uma pequena descrição do próprio, os exercícios salvos serão salvos em nosso banco de dados.
+-	*Criar treinos:* em nosso sistema, os usuários poderão formar treinos, buscando os exercícios que os próprios criaram e salvaram, ao finalizar a montagem dos treinos, terá a possibilidade de salvar os treinos também.
+-	*Personalização:* Todos os treinos e exercícios salvos pelos usuários, poderão ser excluídos e alterados a medida da necessidade que possui.
+-	*Listagem de alimentos:* oferecemos determinados alimentos e suas calorias como padrão em nosso sistema e site, sendo enviados de nosso banco de dados para o site, facilitando para os usuários.
+-	*Busca de alimentos:* permite que os usuários busquem alimentos específicos, caso estejam na lista de alimentos.
+-	*Criação de refeições:* por meio dos alimentos da lista, o usuário poderá montar refeições.
 
 
 ## Tecnologias Utilizadas
@@ -47,16 +47,16 @@ Kaizen is a conceptual company dedicated to facilitating access to programs that
 
 ## Features
 
-- **User Authentication**: Allows users to log in to the system using a username and password.
-- **User Management**: Allows users to modify their own profile information.
-- **Content Management**: Allows users to create and customize workouts, exercises, meals, foods, and timers.
-- **Timer**: Provides the option to use timers as an alternative to repetitions in workouts.
-- **Exercise Creation**: Users can create exercises in our system, define the type of exercise, name, and a short description. The exercises will be saved in our database.
-- **Workout Creation**: Users can create workouts by selecting exercises they have created and saved. Once the workouts are assembled, they can also be saved.
-- **Customization**: All saved workouts and exercises can be deleted and modified as needed.
-- **Food Listing**: We offer certain foods and their calorie counts as default in our system, which are sent from our database to the site, making it easier for users.
-- **Food Search**: Allows users to search for specific foods if they are on the food list.
-- **Meal Creation**: Users can create meals using foods from the list.
+- *User Authentication:* Allows users to log in to the system using a username and password.
+- *User Management:* Allows users to modify their own profile information.
+- *Content Management:* Allows users to create and customize workouts, exercises, meals, foods, and timers.
+- *Timer:* Provides the option to use timers as an alternative to repetitions in workouts.
+- *Exercise Creation:* Users can create exercises in our system, define the type of exercise, name, and a short description. The exercises will be saved in our database.
+- *Workout Creation:* Users can create workouts by selecting exercises they have created and saved. Once the workouts are assembled, they can also be saved.
+- *Customization:* All saved workouts and exercises can be deleted and modified as needed.
+- *Food Listing:* We offer certain foods and their calorie counts as default in our system, which are sent from our database to the site, making it easier for users.
+- *Food Search:* Allows users to search for specific foods if they are on the food list.
+- *Meal Creation:* Users can create meals using foods from the list.
 
 ## Technologies Used
 
