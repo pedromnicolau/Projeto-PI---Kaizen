@@ -30,3 +30,35 @@ O Projeto Integrador (PI) é uma iniciativa da Fatec Araras que visa proporciona
 - Servidor web (Apache, Nginx, etc.)
 - PHP 7.4 ou superior
 - MySQL
+
+# Integrative Project (PI) - Fatec Araras
+
+## Project Description
+
+The Integrative Project (PI) is an initiative by Fatec Araras aimed at providing students with practical experience in software development, applying theoretical concepts learned during the course. This project uses PHP with the MVC (Model-View-Controller) architecture.
+
+## Features
+
+- **User Authentication**: Allows users to log in to the system using a username and password.
+- **User Management**: Allows users to modify their own profile information.
+- **Content Management**: Allows users to create and customize workouts, exercises, meals, foods, and timers.
+- **Timer**: Provides the option to use timers as an alternative to repetitions in workouts.
+- **Exercise Creation**: Users can create exercises in our system, define the type of exercise, name, and a short description. The exercises will be saved in our database.
+- **Workout Creation**: Users can create workouts by selecting exercises they have created and saved. Once the workouts are assembled, they can also be saved.
+- **Customization**: All saved workouts and exercises can be deleted and modified as needed.
+- **Food Listing**: We offer certain foods and their calorie counts as default in our system, which are sent from our database to the site, making it easier for users.
+- **Food Search**: Allows users to search for specific foods if they are on the food list.
+- **Meal Creation**: Users can create meals using foods from the list.
+
+## Technologies Used
+
+- PHP 7.4+
+- MySQL
+- HTML/CSS
+- Bootstrap
+
+## Requirements
+
+- Web server (Apache, Nginx, etc.)
+- PHP 7.4 or higher
+- MySQL
