@@ -2,7 +2,7 @@
 
 <?php
   foreach ($this->data2 as $workout) {
-      echo "<p>{$workout['name']} - {$workout['type']}</p>";
+      echo "<p>{$workout['name']}</p>";
   }
 ?>
 

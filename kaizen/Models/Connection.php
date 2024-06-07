@@ -14,7 +14,7 @@
         try{
           self::$instance = new PDO('mysql:dbname='.$dbname.';host='.$host,$user,$password);
         }
-        catch(Exeption $e){
+        catch(Exception $e){
           echo 'Erro: '.$e;
         }
       }

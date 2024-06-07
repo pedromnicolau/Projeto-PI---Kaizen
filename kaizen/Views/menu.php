@@ -7,19 +7,19 @@
     <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="index.php">Início</a>
+        <a class="nav-link" href="index">Início</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="treino.php">Treino</a>
+        <a class="nav-link" href="workouts">Treino</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="exercicio.php">Exercício</a>
+        <a class="nav-link" href="exercises">Exercício</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="refeicao.php">Refeição</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="alimentacao.php">Alimentação</a>
+        <a class="nav-link" href="foods">Cadastro de alimentos</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="cronometro.php">Cronômetro</a>

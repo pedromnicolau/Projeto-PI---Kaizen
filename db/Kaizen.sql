@@ -19,6 +19,21 @@
 CREATE DATABASE IF NOT EXISTS `kaizen` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */;
 USE `kaizen`;
 
+-- Copiando estrutura para tabela kaizen.users
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) DEFAULT NULL,
+  `birth_date` date DEFAULT NULL,
+  `weight` float DEFAULT NULL,
+  `height` float DEFAULT NULL,
+  `gender` char(1) DEFAULT NULL,
+  `email` varchar(50) DEFAULT NULL,
+  `imc` float DEFAULT NULL,
+  `telefone` varchar(50) DEFAULT NULL,
+  `senha` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 -- Copiando estrutura para tabela kaizen.exercises
 CREATE TABLE IF NOT EXISTS `exercises` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -89,20 +104,6 @@ CREATE TABLE IF NOT EXISTS `timers` (
 
 -- Copiando dados para a tabela kaizen.timers: ~0 rows (aproximadamente)
 
--- Copiando estrutura para tabela kaizen.users
-CREATE TABLE IF NOT EXISTS `users` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(50) DEFAULT NULL,
-  `birth_date` date DEFAULT NULL,
-  `weight` float DEFAULT NULL,
-  `height` float DEFAULT NULL,
-  `gender` char(1) DEFAULT NULL,
-  `email` varchar(50) DEFAULT NULL,
-  `imc` float DEFAULT NULL,
-  `telefone` varchar(50) DEFAULT NULL,
-  `senha` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Copiando dados para a tabela kaizen.users: ~0 rows (aproximadamente)
 
