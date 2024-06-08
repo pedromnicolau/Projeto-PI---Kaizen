@@ -1,0 +1,108 @@
+/* modelo_logico_kaizen: */
+
+CREATE TABLE users (
+    id INTEGER auto_increment PRIMARY KEY not null,
+    name VARCHAR(50),
+    birth_date DATE,
+    weight FLOAT,
+    height FLOAT,
+    gender CHAR,
+    email VARCHAR(50),
+    imc FLOAT,
+    telefone VARCHAR(50),
+    senha VARCHAR(50)
+);
+
+CREATE TABLE exercises (
+    id INTEGER auto_increment PRIMARY KEY not null,
+    name VARCHAR(50),
+    target_muscle VARCHAR(50),
+    type VARCHAR(50),
+    fk_users_id INTEGER
+);
+
+CREATE TABLE workouts (
+    id INTEGER auto_increment PRIMARY KEY not null,
+    name VARCHAR(50),
+    fk_users_id INTEGER
+);
+
+CREATE TABLE timers (
+    work INTEGER,
+    rest INTEGER,
+    rounds INTEGER,
+    sets INTEGER,
+    sets_rest INTEGER,
+    id INTEGER auto_increment PRIMARY KEY not null,
+    name VARCHAR(50),
+    fk_users_id INTEGER
+);
+
+CREATE TABLE workout_exercises (
+    quantity INTEGER,
+    type VARCHAR(50),
+    id INTEGER auto_increment PRIMARY KEY NOT null,
+    fk_workouts_id INTEGER,
+    fk_exercises_id INTEGER
+);
+
+CREATE TABLE meals (
+    id INTEGER auto_increment PRIMARY KEY not null,
+    name VARCHAR(50),
+    fk_users_id INTEGER
+);
+
+CREATE TABLE foods (
+    id INTEGER auto_increment PRIMARY KEY not null,
+    kcal FLOAT,
+    carbo FLOAT,
+    proteins FLOAT,
+    name VARCHAR(50)
+);
+
+CREATE TABLE meal_foods (
+    id INTEGER auto_increment PRIMARY KEY not null,
+    quantity INTEGER,
+    fk_meals_id INTEGER,
+    fk_foods_id INTEGER
+);
+ 
+ALTER TABLE exercises ADD CONSTRAINT FK_exercises_2
+    FOREIGN KEY (fk_users_id)
+    REFERENCES users (id)
+    ON DELETE CASCADE;
+ 
+ALTER TABLE workouts ADD CONSTRAINT FK_workouts_2
+    FOREIGN KEY (fk_users_id)
+    REFERENCES users (id)
+    ON DELETE CASCADE;
+ 
+ALTER TABLE timers ADD CONSTRAINT FK_timers_2
+    FOREIGN KEY (fk_users_id)
+    REFERENCES users (id)
+    ON DELETE CASCADE;
+ 
+ALTER TABLE workout_exercises ADD CONSTRAINT FK_workout_exercises_2
+    FOREIGN KEY (fk_workouts_id)
+    REFERENCES workouts (id)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE workout_exercises ADD CONSTRAINT FK_workout_exercises_3
+    FOREIGN KEY (fk_exercises_id)
+    REFERENCES exercises (id)
+    ON DELETE CASCADE;
+ 
+ALTER TABLE meals ADD CONSTRAINT FK_meals_2
+    FOREIGN KEY (fk_users_id)
+    REFERENCES users (id)
+    ON DELETE CASCADE;
+ 
+ALTER TABLE meal_foods ADD CONSTRAINT FK_meal_foods_2
+    FOREIGN KEY (fk_meals_id)
+    REFERENCES meals (id)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE meal_foods ADD CONSTRAINT FK_meal_foods_3
+    FOREIGN KEY (fk_foods_id)
+    REFERENCES foods (id)
+    ON DELETE CASCADE;
