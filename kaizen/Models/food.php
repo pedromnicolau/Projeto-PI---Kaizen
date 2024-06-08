@@ -10,7 +10,7 @@ require_once 'Connection.php';
 
     public function getFoods(){
       $data = array();
-      $cmd = $this->con->query('SELECT id, name FROM foods');
+      $cmd = $this->con->query('SELECT id, name, kcal, carbo, proteins FROM foods ORDER BY 2');
       $data = $cmd->fetchAll(PDO::FETCH_ASSOC);
       return $data;
     }
