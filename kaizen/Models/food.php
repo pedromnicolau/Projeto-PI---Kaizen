@@ -19,8 +19,7 @@ require_once 'Connection.php';
       $data = array();
       $cmd = $this->con->prepare('SELECT * FROM foods WHERE id =' . $id);
       $cmd->execute();
-      $data = $cmd->fetch();
-
+      $data = $cmd->fetchAll(PDO::FETCH_ASSOC);
       return $data;
     }
     public function deleteFood($id){
