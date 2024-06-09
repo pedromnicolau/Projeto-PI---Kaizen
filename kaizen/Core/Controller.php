@@ -3,7 +3,7 @@
     public $data;
     public $data2;
 
-    public function __contruct(){
+    public function __construct(){
       $this->data = array();
     }
 
