@@ -167,13 +167,18 @@ footer .motivation-phrase {
     bottom: -200px;
 }
 
-#foods {
-    max-width: 500px;
-    max-height: 400px;
+.foods-div {
+    max-width: 800px;
+    /*max-height: 500px;*/
     overflow-y: auto;
     margin: 0 auto;
+    border-radius: 30px;
+    background-color: white;
+    position: relative;
 }
 
-th.food {
-    padding-right: 20px;
+#food-backgroud {
+    color: white;
+    background-image: url('../Medias/img4.jpg');
+    height: 100vh;
 }
