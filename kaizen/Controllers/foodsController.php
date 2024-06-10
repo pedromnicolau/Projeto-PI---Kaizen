@@ -24,7 +24,8 @@
     }
 
     public function register(){
-      $this->loadTemplate('foods/register', array());
+
+      $this->loadTemplate('foods/register');
     }
 
     public function updateFood() {
@@ -41,16 +42,15 @@
       header('Location: ../foods');
       exit;
     }
-    public function registerFoods() {
+    public function registerFood() {
 
       if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $id = $_POST['id'];
         $name = $_POST['name'];
         $kcal = $_POST['kcal'];
         $carbo = $_POST['carbo'];
         $proteins = $_POST['proteins'];
         $w = new Foods();
-        $w->registerFood($id, $kcal, $carbo, $proteins, $name);
+        $w->registerFood($kcal, $carbo, $proteins, $name);
       }
       header('Location: ../foods');
       exit;
