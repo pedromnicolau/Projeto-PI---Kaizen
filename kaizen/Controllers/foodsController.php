@@ -1,20 +1,21 @@
 <?php
   require_once "Models/food.php";
   Class foodsController extends Controller{
-    public function index(){
-      $con = Connection::getConnection();
-      $base_url = strtok($_SERVER["REQUEST_URI"], '?');
-      $items_per_page = 10;
-      $page = isset($_GET['page']) ? $_GET['page'] : 1;
-      $offset = ($page - 1) * $items_per_page;
-      $cmd2 = $con->query('SELECT COUNT(id) as total FROM foods');
-      $result = $cmd2->fetchAll(PDO::FETCH_ASSOC);
-      $total_items = $result[0]['total'];
-      $total_pages = ceil($total_items / $items_per_page);
-      $w = new Foods();
-      $foods = $w->getFoods($offset, $items_per_page);
+    public function index()
+    {
+        $url_completa = $_SERVER["REQUEST_URI"];
+        parse_str(parse_url($url_completa, PHP_URL_QUERY), $query_params);
+        if (isset($query_params['page'])) {
+            $page = $query_params['page'];
+        } else {
+            $page = 1;
+        }
+        $items_per_page = 10;
+        $offset = ($page - 1) * $items_per_page;
+        $w = new Foods();
+        $foods = $w->getFoods($offset, $items_per_page);
+        $this->loadTemplate('foods/index', array(), $foods);
 
-      $this->loadTemplate('foods/index', array(), $foods);
     }
 
     public function edit($id){

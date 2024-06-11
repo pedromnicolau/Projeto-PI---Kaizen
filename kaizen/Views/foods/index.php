@@ -23,34 +23,38 @@
       </tbody>
     </table>
     <?php
-    $con = Connection::getConnection();
-    $base_url = strtok($_SERVER["REQUEST_URI"], '?');
-    $items_per_page = 10;
-    $page = isset($_GET['page']) ? $_GET['page'] : 1;
-    $offset = ($page - 1) * $items_per_page;
-    $cmd2 = $con->query('SELECT COUNT(id) as total FROM foods');
-    $result = $cmd2->fetchAll(PDO::FETCH_ASSOC);
-    $total_items = $result[0]['total'];
-    $total_pages = ceil($total_items / $items_per_page);
-    $range = 1; // Altere isso para o número de links de página que você deseja exibir de cada lado da página atual
-
-    echo "<nav aria-label='Navegação de página exemplo'>
-    <ul class='pagination justify-content-center'>";
-    
+        $con = Connection::getConnection();
+        $url_completa = $_SERVER["REQUEST_URI"];
+        parse_str(parse_url($url_completa, PHP_URL_QUERY), $query_params);
+        if (isset($query_params['page'])) {
+            $page = $query_params['page'];
+        } else {
+            $page = 1;
+        }
+        $items_per_page = 10;
+        $offset = ($page - 1) * $items_per_page;
+        echo $page;
+        $cmd2 = $con->query('SELECT COUNT(id) as total FROM foods');
+        $result = $cmd2->fetchAll(PDO::FETCH_ASSOC);
+        $total_items = $result[0]['total'];
+        $total_pages = $total_items / $items_per_page;
+        $range = 1;
+        echo "<nav aria-label='Navegação de página exemplo'>
+        <ul class='pagination justify-content-center'>";
     if($page > 1){
-        echo "<li class='page-item'><a class='page-link' href='".$base_url."?page=".($page - 1)."'>Anterior</a></li>";
+        echo "<li class='page-item'><a class='page-link' href='foods?page=".($page - 1)."'>Anterior</a></li>";
     }
     
     for($i = max(1, $page - $range); $i <= min($page + $range, $total_pages); $i++){
         if($i == $page){
-            echo "<li class='page-item active'><a class='page-link' href='".$base_url."?page=$i'>$i</a></li>";
+            echo "<li class='page-item active'><a class='page-link' href='foods?page=$i'>$i</a></li>";
         }else{
-            echo "<li class='page-item'><a class='page-link' href='".$base_url."?page=$i'>$i</a></li>";
+            echo "<li class='page-item'><a class='page-link' href='foods?page=$i'>$i</a></li>";
         }
     }
     
     if($page < $total_pages){
-        echo "<li class='page-item'><a class='page-link' href='".$base_url."?page=".($page + 1)."'>Próximo</a></li>";
+        echo "<li class='page-item'><a class='page-link' href='foods?page=".($page + 1)."'>Próximo</a></li>";
     }
     
     echo "</ul></nav>";?>
