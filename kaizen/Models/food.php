@@ -8,10 +8,7 @@ require_once 'Connection.php';
       $this->con = Connection::getConnection();
     }
 
-    public function getFoods(){
-      $items_per_page = 10;
-      $page = isset($_GET['page']) ? $_GET['page'] : 1;
-      $offset = ($page - 1) * $items_per_page;
+    public function getFoods($offset, $items_per_page){
       $data = array();
       $cmd = $this->con->query('SELECT id, name, kcal, carbo, proteins FROM foods ORDER BY 2 LIMIT '. $items_per_page . ' OFFSET ' .$offset);
       $data = $cmd->fetchAll(PDO::FETCH_ASSOC);
