@@ -25,31 +25,32 @@ require_once 'Connection.php';
 
     public function updateExercise($id, $name, $target_muscle, $type){
       $data = array();
-      $w = $this->con->prepare('UPDATE `exercises` SET `name`=:name, `target_muscle`=:target_muscle,  `type`=:type WHERE `id`=:id');
-      $w->bindParam(':name', $name);
-      $w->bindParam(':target_muscle', $target_muscle);
-      $w->bindParam(':type', $type);
-      $w->bindParam(':id', $id);
+      $w = $this->con->prepare('CALL updateExercise(?, ?, ?, ?)');
+      $w->bindParam(1, $id);
+      $w->bindParam(2, $name);
+      $w->bindParam(3, $target_muscle);
+      $w->bindParam(4, $type);
       $w->execute();
-      $data = $w->fetch();
+      $data = $w->fetchAll(PDO::FETCH_ASSOC);
     }
 
     
     public function registerExercise( $name, $target_muscle, $type){
       $data = array();
-      $cmd = $this->con->prepare('INSERT INTO `exercises`(`name`, `target_muscle`, `type`, `fk_users_id`) VALUES (:name, :target_muscle, :type, 1)');
-      $cmd->bindParam(':name', $name);
-      $cmd->bindParam(':target_muscle', $target_muscle);
-      $cmd->bindParam(':type', $type);
-      $cmd->execute();
-      $data = $cmd->fetch();
+      $w = $this->con->prepare('call registerExercise(?, ?, ?)');
+      $w->bindParam(1, $name);
+      $w->bindParam(2, $target_muscle);
+      $w->bindParam(3, $type);
+      $w->execute();
+      $data = $w->fetchAll(PDO::FETCH_ASSOC);
     }
     
     public function deleteExercise($id){
       $data = array();
-      $cmd = $this->con->prepare('DELETE FROM exercises WHERE id =' . $id);
-      $cmd->execute();
-      $data = $cmd->fetch();
+      $w = $this->con->prepare('call deleteExercise(?)');
+      $w->bindParam(1, $id);
+      $w->execute();
+      $data = $w->fetchAll(PDO::FETCH_ASSOC);
     }
   }
 ?>

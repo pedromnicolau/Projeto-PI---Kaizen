@@ -11,8 +11,8 @@
             <input type="text" id="name" name="name" class="form-control">
           </div>
           <div class="form-group">
-            <label for="taget_muscle">Musculo alvo:</label>
-            <input type="text" id="taget_muscle" name="taget_muscle" class="form-control">
+            <label for="target_muscle">Musculo alvo:</label>
+            <input type="text" id="target_muscle" name="target_muscle" class="form-control">
           <div class="form-group">
             <label for="type">Tipo:</label>
             <input type="text" id="type" name="type" class="form-control">

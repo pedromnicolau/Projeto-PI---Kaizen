@@ -12,8 +12,8 @@ $exercise = $w->getExercisesById($partes_url[7]);
   <label for="name">Nome:</label><br>
   <input type="text" id="name" name="name" value="<?php echo isset($exercise[0]['name']) ? $exercise[0]['name'] : ''; ?>"><br>
 
-  <label for="taget_muscle">Musculo alvo:</label><br>
-  <input type="text" id="target_muscle" name="target_muscle" value="<?php echo isset($exercise[0]['target_muscle']) ? $exercise[0]['taget_muscle'] : ''; ?>"><br>
+  <label for="target_muscle">Musculo alvo:</label><br>
+  <input type="text" id="target_muscle" name="target_muscle" value="<?php echo isset($exercise[0]['target_muscle']) ? $exercise[0]['target_muscle'] : ''; ?>"><br>
 
   <label for="type">Tipo de exercício:</label><br>
   <input type="text" id="type" name="type" value="<?php echo isset($exercise[0]['type']) ? $exercise[0]['type'] : ''; ?>"><br>

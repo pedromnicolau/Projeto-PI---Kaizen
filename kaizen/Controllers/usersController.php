@@ -1,10 +1,5 @@
 <?php
-
 Class usersController extends Controller{
-  private $con;
-  public function __construct($con) {
-    $this->con = $con;
-}  
 
   public function index(){
 
@@ -12,21 +7,22 @@ Class usersController extends Controller{
   }
 
   public function login() {
-    $w = new User($this->con);
+    $userModel = new User();
     $email = $_POST['email'];
     $password = $_POST['password'];
-
-    $user = $w->verifyUser($email, $password);
-      if($_POST['email'] == $email and $_POST['password'] == $password){
+    $user = $userModel->verifyUser($email, $password);
+    session_start();
+    $_SESSION['user_name'] = $user['name'];
+    if (!empty($user)) {
         $_SESSION['loggedin'] = TRUE;
         header("location: welcome.php");
-      } else {
+        exit;
+    } else {
         $_SESSION['loggedin'] = FALSE;
-  }
-
-
-
-  }
+        header('Location: ../../kaizen');
+        exit;
+    }
+}
 }
 
 ?>

@@ -3,17 +3,15 @@ require_once 'Connection.php';
   class User{
     private $user;
     public function __construct($user) {
-      $this->user = $user;
+      $this->user = Connection::getConnection();
   }
 
   public function verifyUser($email, $password) {
-    $data = array();
     $w = $this->user->prepare("SELECT * FROM users WHERE email = ? AND password = ?");
-    $w->bind_param("ss", $email, $password);
+    $w->bindParam(1, $email);
+    $w->bindParam(2, $password);
     $w->execute();
-    $w->execute();
-    $data = $w->fetch();
-    return $data;
+    return $w->fetchAll(PDO::FETCH_ASSOC);
 }
 
 }
