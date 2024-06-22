@@ -1,4 +1,10 @@
 <?php
+if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+    header("location: ../kaizen");
+    exit;
+}
+?>
+<?php
 $w = new Exercise();
 $url_atual = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 $partes_url = explode('/', $url_atual);

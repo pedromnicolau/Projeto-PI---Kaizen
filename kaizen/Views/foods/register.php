@@ -1,4 +1,9 @@
-
+<?php
+if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+    header("location: ../kaizen");
+    exit;
+}
+?>
 <div id="food-backgroud">
   <br>
   <h1 style="text-align: center;">Cadastro de alimentos</h1>
